@@ -1,15 +1,16 @@
 ---
 import hero from '../assets/hero.png';
 import { Icon } from 'astro-icon';
+import preact from '@astrojs/preact';
 ---
 
-<header class="border-b border-gray-600 py-2">
+<header>
    <div
       class="flex items-center justify-between xl:max-w-7xl xl:mx-auto max-w-full px-[8%]">
       <img src={hero} alt="petit nounours" class="h-24" />
 
-      <nav class="lg:block hidden flex items-center w-auto">
-         <ul class="text-base text-slate-100 flex justify-between">
+      <nav class="lg:block flex items-center w-auto">
+         <ul class="text-base text-slate-100 flex-wrap justify-between">
             <li>
                <a class="px-3 py-2 hover:text-gray-800" href="/">Accueil</a>
             </li>
@@ -47,9 +48,9 @@ import { Icon } from 'astro-icon';
          </ul>
       </nav>
 
-      <iconify-icon
+      <!-- <iconify-icon
          icon="iconamoon:menu-burger-horizontal"
          width="48"
-         class="lg:hidden block h-6 w-6 cursor-pointer"></iconify-icon>
+         class="lg:hidden block h-6 w-6 cursor-pointer"></iconify-icon> -->
    </div>
 </header>
