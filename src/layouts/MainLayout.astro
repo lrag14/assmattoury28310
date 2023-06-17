@@ -9,14 +9,13 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <script
+      src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"
+    ></script>;
+
     <title>{title}</title>
   </head>
   <body>
-    <div class="flex flex-col items-center w-full">
-      <div
-        class="flex flex-col items-center w-4/6 h-full my-20 lg:w-3/6 2xl:w-2/6 gap-y-14">
-        <slot />
-      </div>
-    </div>
+    <slot />
   </body>
 </html>
