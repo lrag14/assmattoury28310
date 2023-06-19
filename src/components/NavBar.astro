@@ -1,56 +1,19 @@
 ---
 import hero from '../assets/hero.png';
-import { Icon } from 'astro-icon';
-import preact from '@astrojs/preact';
+import Hamburger from './Hamburger.astro';
 ---
 
-<header>
-   <div
-      class="flex items-center justify-between xl:max-w-7xl xl:mx-auto max-w-full px-[8%]">
-      <img src={hero} alt="petit nounours" class="h-24" />
-
-      <nav class="lg:block flex items-center w-auto">
-         <ul class="text-base text-slate-100 flex-wrap justify-between">
-            <li>
-               <a class="px-3 py-2 hover:text-gray-800" href="/">Accueil</a>
-            </li>
-            <li>
-               <a class="px-3 py-2 hover:text-gray-800" href="/about"
-                  >Présentation</a
-               >
-            </li>
-            <li>
-               <a class="px-3 py-2 hover:text-gray-800" href="/livret"
-                  >Livret d'accueil</a
-               >
-            </li>
-            <li>
-               <a class="px-3 py-2 hover:text-gray-800" href="/help">Aides</a>
-            </li>
-            <li>
-               <a class="px-3 py-2 hover:text-gray-800" href="/nounou"
-                  >Partenaires</a
-               >
-            </li>
-            <li>
-               <a class="px-3 py-2 hover:text-gray-800" href="/rates">Tarifs</a>
-            </li>
-            <li>
-               <a class="px-3 py-2 hover:text-gray-800" href="/opinions"
-                  >Opinions</a
-               >
-            </li>
-            <li>
-               <a class="px-2 py-2 hover:text-gray-800" href="/contact"
-                  >Contactez moi</a
-               >
-            </li>
-         </ul>
-      </nav>
-
-      <!-- <iconify-icon
-         icon="iconamoon:menu-burger-horizontal"
-         width="48"
-         class="lg:hidden block h-6 w-6 cursor-pointer"></iconify-icon> -->
+<div class="flex justify-between px-5">
+   <img src={hero} alt="petit nounours" class="h-24" />
+   <div class="nav-links">
+      <a href="/">Accueil</a>
+      <a href="/about">Présentation</a>
+      <a href="/livret">Livret d'accueil</a>
+      <a href="/help">Aides</a>
+      <a href="/nounou">Partenaires</a>
+      <a href="/rates">Tarifs</a>
+      <a href="/opinions">Avis</a>
+      <a href="/contact">Contactez moi</a>
    </div>
-</header>
+   <Hamburger />
+</div>
