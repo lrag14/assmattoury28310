@@ -16,17 +16,16 @@ import Hamburger from './Hamburger.astro';
    </div>
    <Hamburger />
    <div class="text-center">
-      <button
-         class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-         type="button"
-         data-drawer-target="drawer-contact"
-         data-drawer-show="drawer-contact"
-         aria-controls="drawer-contact"
-         onclick="s
-          ndMail()"
-
-         >Contactez-moi
-      </button>
+      <a href="/contact"
+         ><button
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+            type="button"
+            data-drawer-target="drawer-contact"
+            data-drawer-show="drawer-contact"
+            aria-controls="drawer-contact"
+            >Contactez-moi
+         </button>
+      </a>
    </div>
 
    <!-- drawer component -->
@@ -123,9 +122,3 @@ import Hamburger from './Hamburger.astro';
       </p>
    </div> -->
 </div>
-<script>
-   function sendEmail() {
-      const emailAddress = 'laurentrober@gmail.com'; // Remplacez par l'adresse e-mail à laquelle vous souhaitez envoyer le message
-      window.location.href = `mailto:${emailAddress}`;
-   }
-</script>
