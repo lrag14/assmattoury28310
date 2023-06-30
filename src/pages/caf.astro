@@ -1,0 +1,64 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import calcul from '../assets/calcul.jpg';
+---
+
+<MainLayout title="Vos droits">
+   <article class="format lg:format-lg flex flex-col mx-auto px-2 mt-28">
+      <h2 class="text-white text-center">
+         Le complément de libre choix du mode de garde (CMG 2023) est versé sous
+         conditions par la CAF
+      </h2>
+      <p class="text-white">
+         Son montant varie en fonction de plafonds de ressources. <br />Les
+         revenus pris en compte sont ceux de l'année N-2 indiqués sur l'avis
+         d'imposition N-1. Dans tous les cas, les parents doivent supporter au
+         moins 15 % du salaire versé.
+      </p>
+
+      <h2 class="text-yellow-300 text-center">
+         Voici le barème du CMG en cas d'embauche directe d'une assistante
+         maternelle. Chaque enfant gardé donne droit à l'aide mentionnée.
+      </h2>
+      <ul class="text-white list-none">
+         <li class="text-white">
+            <strong class="text-2xl text-yellow-300">506,01 euros</strong> : en cas
+            de ressources inférieures ou égales à 21 661 euros
+         </li>
+         <li class="text-white">
+            <strong class="text-2xl text-yellow-300">319,07 euros</strong> : en cas
+            de ressources comprises entre 21 661 et 48 135 euros
+         </li>
+         <li class="text-white">
+            <strong class="text-2xl text-yellow-300">191,42 euros</strong> : en cas
+            de ressources supérieures à 48 135 euros
+         </li>
+      </ul>
+
+      <section class="flex justify-around">
+         <div
+            role="status"
+            class="space-y-2 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-start m-2">
+            <div
+               class="flex items-center justify-center w-auto h-auto rounded sm:w-96">
+               <img
+                  src={calcul}
+                  class="h-auto w-auto rounded-2xl"
+                  alt="calcul"
+               />
+            </div>
+            <div class="w-full">
+               <div>
+                  <h3 class="text-white text-lg lg:pt-24 md:pt-24">
+                     Selon vos revenus, le montant indiqué sera donc pris en
+                     charge par votre CAF
+                  </h3>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <h3 class="text-yellow-300 text-center"></h3>
+      <p class="text-white text-center"></p>
+   </article>
+</MainLayout>
