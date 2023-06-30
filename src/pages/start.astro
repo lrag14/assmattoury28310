@@ -1,93 +1,86 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import pregnant from '../assets/pregnant.png';
-import cafemploi from '../assets/cafemploi.png';
 ---
 
 <MainLayout title="Vos droits">
-   <section
-      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5">
-      <div class="flex justify-around">
-         <h1
-            class="text-6xl lg:text-5xl md:text-4xl sm:text-3xl xsm:text-2xl font-bold filter drop-shadow-sm text-slate-200 text-start mt-20">
-            Bienvenue dans le monde de la parentalité !
-         </h1>
-      </div>
-   </section>
-
-   <section class="flex justify-around">
-      <div
-         role="status"
-         class="space-y-2 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-start m-2">
-         <div class="w-full text-white m-6">
-            Ces aides sont là pour vous soutenir dans le financement de la garde
-            de votre enfant à domicile. La Caisse d'Allocations Familiales (CAF)
-            et Pajemploi sont vos précieux guides dans cette aventure. Sur leurs
-            sites internet, vous trouverez toutes les informations nécessaires
-            sur les critères d'éligibilité, les montants et les démarches à
-            suivre. Assurez-vous de remplir les conditions d'éligibilité en
-            fonction de vos revenus, du nombre d'enfants à charge et du coût de
-            la garde. Préparez les documents requis tels que votre avis
-            d'imposition, le contrat de travail avec l'assistante maternelle,
-            etc. Pour obtenir des réponses à vos questions et entamer les
-            démarches administratives, contactez la CAF et Pajemploi. Vous
-            pouvez les appeler, leur envoyer un courrier ou utiliser leurs sites
-            internet. Voilà, vous êtes prêts à partir à l'aventure en toute
-            sérénité ! Grâce à vos connaissances sur les aides financières, vous
-            pourrez faire garder votre enfant par une assistante maternelle tout
-            en bénéficiant du soutien nécessaire. La parentalité est un voyage
-            extraordinaire, et vous êtes maintenant prêts à vivre cette
-            expérience magique en toute confiance !
-         </div>
-         <div
-            class="flex items-center justify-center w-auto h-auto rounded sm:w-96">
-            <img
-               src={cafemploi}
-               class="h-auto rounded-3xl"
-               alt="caf et epajemploi logo"
-            />
-         </div>
-      </div>
-   </section>
-   <article class="format lg:format-lg flex flex-col mx-auto px-2">
-      <h1 class="text-white">Bienvenue dans le monde de la parentalité !</h1>
+   <article class="format lg:format-lg flex flex-col mx-auto px-2 mt-28">
+      <h1 class="text-white text-center">
+         Bienvenue dans le monde de la parentalité !
+      </h1>
       <p class="text-white">
          Vous êtes sur le point de devenir parents et vous voulez connaître vos
          droits pour faire garder votre enfant par une assistante maternelle. <br
          />Ne vous inquiétez pas, voici un résumé rapide pour vous aider !
          <br />
-         Il y a deux importantes aides financières à connaître : le Complément de
-         Libre Choix du Mode de Garde (CMG) et Pajemploi+.
+         Il y a deux aides à connaître. L'une financière et l'autre administrative.
       </p>
+      <h3 class="text-white text-center">
+         Le Complément de Libre Choix du Mode de Garde (CMG) et Pajemploi+
+      </h3>
+      <h2 class="text-yellow-300 text-center">
+         Ces aides sont là pour vous soutenir dans le financement et la gestion
+         du bulletin de salaire avec l'URSSAF.
+      </h2>
 
-      <h2>When does design come in handy?</h2>
-      <p>
-         While it might seem like extra work at a first glance, here are some
-         key moments in which prototyping will come in handy:
+      <ul class="text-white list-none">
+         <li class="text-white">
+            <strong class="text-2xl text-yellow-300">La CAF</strong> : En fonction
+            de vos revenus, du nombre d'enfants à charge et du coût de la garde,
+            vous recevrez une aide financière.
+         </li>
+         <li class="text-white">
+            <strong class="text-2xl text-yellow-300">Pajemploi+</strong> : Ce service
+            permet de confier toutes les démarches liées à la rémunération. Cela
+            signifie que vous n'avez pas à vous soucier de calculer les salaires,
+            les charges sociales, et de faire les déclarations requises. <br
+            />En utilisant Pajemploi+, les parents employeurs peuvent également
+            recevoir immédiatement les prestations familiales auxquelles ils ont
+            droit, sans attendre.<br /> En résumé, c'est un service qui facilite
+            la gestion administrative de l'emploi d'une personne pour la garde de
+            vos enfants et vous permet de bénéficier rapidement des prestations familiales.
+         </li>
+      </ul>
+
+      <section class="flex justify-around">
+         <div
+            role="status"
+            class="space-y-2 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-start m-2">
+            <div
+               class="flex items-center justify-center w-auto h-auto rounded sm:w-96">
+               <img
+                  src={pregnant}
+                  class="h-auto rounded-3xl"
+                  alt="une maman ours"
+               />
+            </div>
+            <div class="w-full">
+               <div class="">
+                  <Assurez-vous class="text-white text-lg">
+                     Ces aides sont là pour vous soutenir dans le financement de
+                     la garde de votre enfant. La CAF et Pajemploi sont vos
+                     précieux sountiens et guides dans cette aventure. Sur leurs
+                     sites internet, vous trouverez toutes les informations
+                     nécessaires sur les critères d'éligibilité, les montants et
+                     les démarches à suivre.<br />Assurez-vous de remplir les
+                     conditions d'éligibilité en fonction de vos revenus, du
+                     nombre d'enfants à charge et du coût de la garde...
+                  </Assurez-vous>
+                  <h3></h3><p></p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <h3 class="text-yellow-300 text-center">
+         Voila vous êtes prêts à partir à l'aventure en toute sérénité !
+      </h3>
+      <p class="text-white text-center">
+         Grâce à vos connaissances sur les aides financières, vous pourrez faire
+         garder votre enfant par une assistante maternelle tout en bénéficiant
+         du soutien nécessaire. La parentalité est un voyage extraordinaire, et
+         vous êtes maintenant prêts à vivre cette expérience magique en toute
+         confiance !
       </p>
-      <ol>
-         <li>
-            <strong>Usability testing</strong>. Does your user know how to exit
-            out of screens? Can they follow your intended user journey and buy
-            something from the site you’ve designed? By running a usability
-            test, you’ll be able to see how users will interact with your design
-            once it’s live;
-         </li>
-         <li>
-            <strong>Involving stakeholders</strong>. Need to check if your GDPR
-            consent boxes are displaying properly? Pass your prototype to your
-            data protection team and they can test it for real;
-         </li>
-         <li>
-            <strong>Impressing a client</strong>. Prototypes can help explain or
-            even sell your idea by providing your client with a hands-on
-            experience;
-         </li>
-         <li>
-            <strong>Communicating your vision</strong>. By using an interactive
-            medium to preview and test design elements, designers and developers
-            can understand each other — and the project — better.
-         </li>
-      </ol>
    </article>
 </MainLayout>
