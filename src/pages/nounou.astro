@@ -12,4 +12,62 @@ import MainLayout from '../layouts/MainLayout.astro';
          </h1>
       </div>
    </section>
+   <article class="format lg:format-lg flex flex-col mx-auto px-2">
+      <h2 class="text-white text-center">Partenaires privilégié</h2>
+      <p class="text-white">Son ....</p>
+
+      <h2 class="text-yellow-300 text-center">Voici....</h2>
+      <ul class="text-white list-none">
+         <li class="text-white">
+            <strong class="text-2xl text-yellow-300"> ....</strong>
+            .....
+         </li>
+         <li class="text-white">
+            <strong class="text-2xl text-yellow-300">....</strong> : ...
+         </li>
+         <li class="text-white">
+            <strong class="text-2xl text-yellow-300">...</strong> : ....
+         </li>
+      </ul>
+
+      <section class="flex justify-around">
+         <div
+            role="status"
+            class="space-y-2 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-start m-2">
+            <div
+               class="flex items-center justify-center w-auto h-auto rounded sm:w-96">
+               <!-- <img
+                  src={calcul}
+                  class="h-auto w-auto rounded-2xl"
+                  alt="calcul"
+               /> -->
+            </div>
+            <div class="w-full">
+               <div>
+                  <h3
+                     class="text-yellow-300 lg:pt-24 lg:text-2xl md:pt-24 md:text-2xl">
+                     Se....
+                  </h3>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <button
+         type="button"
+         class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+         <a href="#" class="text-white no-underline">.....</a>
+         <svg
+            aria-hidden="true"
+            class="w-5 h-5 ml-2 -mr-1"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+               fill-rule="evenodd"
+               d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+               clip-rule="evenodd"></path></svg
+         >
+      </button>
+   </article>
 </MainLayout>
