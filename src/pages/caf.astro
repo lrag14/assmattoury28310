@@ -1,6 +1,12 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import calcul from '../assets/calcul.jpg';
+const cafRessource = {
+   firstRessourc: 506.01,
+   secondRessourc: 319.07,
+   thirthRessourc: 191.42,
+};
+const { firstRessourc, secondRessourc, thirthRessourc } = cafRessource;
 ---
 
 <MainLayout title="Vos droits">
@@ -22,44 +28,48 @@ import calcul from '../assets/calcul.jpg';
       </h2>
       <ul class="text-white list-none">
          <li class="text-white">
-            <strong class="text-2xl text-yellow-300">506,01 euros</strong> : en cas
-            de ressources inférieures ou égales à 21 661 euros
+            <strong class="text-2xl text-yellow-300"></strong>
+            {firstRessourc}
+            euros<strong>
+               : en cas de ressources inférieures ou égales à 21 661 euros
+            </strong>
+            <li class="text-white">
+               <strong class="text-2xl text-yellow-300">{secondRessourc}</strong
+               > : en cas de ressources comprises entre 21 661 et 48 135 euros
+            </li>
+            <li class="text-white">
+               <strong class="text-2xl text-yellow-300"
+                  >{thirthRessourc} euros</strong
+               > : en cas de ressources supérieures à 48 135 euros
+            </li>
          </li>
-         <li class="text-white">
-            <strong class="text-2xl text-yellow-300">319,07 euros</strong> : en cas
-            de ressources comprises entre 21 661 et 48 135 euros
-         </li>
-         <li class="text-white">
-            <strong class="text-2xl text-yellow-300">191,42 euros</strong> : en cas
-            de ressources supérieures à 48 135 euros
-         </li>
-      </ul>
 
-      <section class="flex justify-around">
-         <div
-            role="status"
-            class="space-y-2 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-start m-2">
+         <section class="flex justify-around">
             <div
-               class="flex items-center justify-center w-auto h-auto rounded sm:w-96">
-               <img
-                  src={calcul}
-                  class="h-auto w-auto rounded-2xl"
-                  alt="calcul"
-               />
-            </div>
-            <div class="w-full">
-               <div>
-                  <h3
-                     class="text-yellow-300 lg:pt-24 lg:text-2xl md:pt-24 md:text-2xl">
-                     Selon vos revenus, le montant indiqué sera donc pris en
-                     charge par votre CAF
-                  </h3>
+               role="status"
+               class="space-y-2 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-start m-2">
+               <div
+                  class="flex items-center justify-center w-auto h-auto rounded sm:w-96">
+                  <img
+                     src={calcul}
+                     class="h-auto w-auto rounded-2xl"
+                     alt="calcul"
+                  />
+               </div>
+               <div class="w-full">
+                  <div>
+                     <h3
+                        class="text-yellow-300 lg:pt-24 lg:text-2xl md:pt-24 md:text-2xl">
+                        Selon vos revenus, le montant indiqué sera donc pris en
+                        charge par votre CAF
+                     </h3>
+                  </div>
                </div>
             </div>
-         </div>
-      </section>
+         </section>
 
-      <h3 class="text-yellow-300 text-center"></h3>
-      <p class="text-white text-center"></p>
+         <h3 class="text-yellow-300 text-center"></h3>
+         <p class="text-white text-center"></p>
+      </ul>
    </article>
 </MainLayout>

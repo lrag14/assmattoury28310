@@ -1,7 +1,15 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import miam from '../assets/miam.png';
+// /////////////////////////
 const title = ' : Les repas proposés';
+const rates = {
+      smallDej: 3,
+      dej: 3.5,
+      gouter: 1.5,
+      diner: 4,
+};
+const { smallDej, dej, gouter, diner } = rates;
 ---
 
 <MainLayout title="Repas">
@@ -31,76 +39,72 @@ const title = ' : Les repas proposés';
                               alt="une famille nounours"
                         />
                   </div>
-                  <div class="w-full">
-                        <div class="">
-                              <section
-                                    class="mt-5 flex justify-around flex-wrap gap-2">
-                                    <a
-                                          class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-blue-800 hover:bg-pink-600">
-                                          <h5
-                                                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                                Le petit-déjeuner
-                                          </h5>
-                                          <ul
-                                                class="font-normal text-gray-700 dark:text-yellow-400">
-                                                <li>
-                                                      Bol chocolaté ou laitage
-                                                </li>
-                                                <li>Fruit ou jus de fruit</li>
-                                                <li>Céréales ou gâteau</li>
-                                                <li class="pt-3">3€ / jour</li>
-                                          </ul>
-                                    </a>
-                                    <a
-                                          class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-blue-800 hover:bg-pink-600">
-                                          <h5
-                                                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                                Le déjeuner
-                                          </h5>
-                                          <ul
-                                                class="font-normal text-gray-700 dark:text-yellow-400">
-                                                <li>Viande ou poisson</li>
-                                                <li>Légume ou féculent</li>
-                                                <li>Laitage et/ou fruit</li>
-                                                <li class="pt-3">
-                                                      3.5€ / jour
-                                                </li>
-                                          </ul>
-                                    </a>
 
-                                    <a
-                                          class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-blue-800 hover:bg-pink-600">
-                                          <h5
-                                                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                                Le goûter
-                                          </h5>
-                                          <ul
-                                                class="font-normal text-gray-700 dark:text-yellow-400">
-                                                <li>Au choix</li>
-                                                <li>Fruit ou compote</li>
-                                                <li>Gâteau</li>
-                                                <li class="pt-3">
-                                                      1.5€ / jour
-                                                </li>
-                                          </ul>
-                                    </a>
-                                    <a
-                                          class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-blue-800 hover:bg-pink-600">
-                                          <h5
-                                                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                                Le dîner
-                                          </h5>
-                                          <ul
-                                                class="font-normal text-gray-700 dark:text-yellow-400">
-                                                <li>Entrée légumes</li>
-                                                <li>Féculent</li>
-                                                <li>Laitage et/ou dessert</li>
-                                                <li class="pt-3">4€ / jour</li>
-                                          </ul>
-                                    </a>
-                              </section>
+                  <section>
+                        <div class="mt-5 flex justify-around flex-wrap gap-2">
+                              <a
+                                    class="block w-60 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-blue-800 hover:bg-pink-600">
+                                    <h5
+                                          class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                          Le petit-déjeuner
+                                    </h5>
+                                    <ul
+                                          class="font-normal text-gray-700 dark:text-yellow-400">
+                                          <li>Bol chocolaté ou laitage</li>
+                                          <li>Fruit ou jus de fruit</li>
+                                          <li>Céréales ou gâteau</li>
+                                          <li class="pt-3">
+                                                {smallDej}€ / jour
+                                          </li>
+                                    </ul>
+                              </a>
+                              <a
+                                    class="block w-60 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-blue-800 hover:bg-pink-600">
+                                    <h5
+                                          class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                          Le déjeuner
+                                    </h5>
+                                    <ul
+                                          class="font-normal text-gray-700 dark:text-yellow-400">
+                                          <li>Viande ou poisson</li>
+                                          <li>Légume ou féculent</li>
+                                          <li>Laitage et/ou fruit</li>
+                                          <li class="pt-3">{dej}€ / jour</li>
+                                    </ul>
+                              </a>
                         </div>
-                  </div>
+
+                        <div class="mt-5 flex justify-around flex-wrap gap-2">
+                              <a
+                                    class="block w-60 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-blue-800 hover:bg-pink-600">
+                                    <h5
+                                          class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                          Le goûter
+                                    </h5>
+                                    <ul
+                                          class="font-normal text-gray-700 dark:text-yellow-400">
+                                          <li>Au choix</li>
+                                          <li>Fruit ou compote</li>
+                                          <li>Gâteau</li>
+                                          <li class="pt-3">{gouter}€ / jour</li>
+                                    </ul>
+                              </a>
+                              <a
+                                    class="block w-60 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-blue-800 hover:bg-pink-600">
+                                    <h5
+                                          class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                          Le dîner
+                                    </h5>
+                                    <ul
+                                          class="font-normal text-gray-700 dark:text-yellow-400">
+                                          <li>Entrée légumes</li>
+                                          <li>Féculent</li>
+                                          <li>Laitage et/ou dessert</li>
+                                          <li class="pt-3">{diner}€ / jour</li>
+                                    </ul>
+                              </a>
+                        </div>
+                  </section>
             </div>
       </section>
 </MainLayout>
