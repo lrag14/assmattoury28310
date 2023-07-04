@@ -2,7 +2,6 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import { BiMailSend } from '@react-icons/all-files/bi/BiMailSend';
 import { AiTwotonePhone } from '@react-icons/all-files/ai/AiTwotonePhone';
-import elomam from '../assets/elomam.png';
 ---
 
 <MainLayout title="Contact">
@@ -24,7 +23,7 @@ import elomam from '../assets/elomam.png';
             class="flex items-center justify-center w-auto h-auto rounded sm:w-96">
             <img
                src="https://res.cloudinary.com/dgakih33l/image/upload/v1688440085/assmattoury/elomam_mlfuu3.png"
-               class="h-auto rounded-3xl"
+               class="h-auto rounded-3xl mb-10"
                alt=""
             />
          </div>
@@ -39,6 +38,61 @@ import elomam from '../assets/elomam.png';
                />claire.dazy@gmail.com
             </a>
             <p>Mariée, et maman de 2 enfants de 10 ans</p>
+         </div>
+      </div>
+   </section>
+   <section class="flex justify-around">
+      <div
+         role="status"
+         class="space-y-2 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-start m-2">
+         <div
+            class="flex items-center justify-center w-auto h-auto rounded sm:w-96">
+            <img
+               src="https://res.cloudinary.com/dgakih33l/image/upload/v1688463059/assmattoury/caf_mtvm4c.jpg"
+               class="h-auto rounded-3xl mb-10"
+               alt=""
+            />
+         </div>
+         <div class="w-full text-white m-6">
+            <div class="text-xl font-bold" <h1>Caf d'Eure-et-Loir</div>
+            <p class="text-white text-lg">10 Rue Charles Victor Garola</p>
+            <p>28000 Chartres</p>
+            <p class="flex gap-2"><AiTwotonePhone />32 30</p>
+            <a
+               href="https://wwwd.caf.fr/wps/portal/caffr/macaf/contactermacaf#/contactcaf"
+               class="flex gap-2">
+               <BiMailSend className="text-white h-6 w-6 align-middle" />Lien
+               direct pour contacter votre CAF
+            </a>
+         </div>
+      </div>
+   </section>
+   <section class="flex justify-around">
+      <div
+         role="status"
+         class="space-y-2 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-start m-2">
+         <div
+            class="flex items-center justify-center w-auto h-auto rounded sm:w-96">
+            <img
+               src="https://res.cloudinary.com/dgakih33l/image/upload/v1688440085/assmattoury/pajemploi_hjza3g.jpg"
+               class="h-auto rounded-3xl mb-10"
+               alt=""
+            />
+         </div>
+         <div class="w-full text-white m-6">
+            <div class="text-xl font-bold" <h1>Pajemploi+ URSSAF</div>
+            <p class="text-white text-lg">Urssaf service Pajemploi</p>
+            <p class="text-white text-lg">TSA 40010</p>
+            <p>38046 GRENOBLE CEDEX</p>
+            <p class="flex gap-2">
+               <AiTwotonePhone />08 06 80 72 53 Prix Appel Local
+            </p>
+            <a
+               href="https://www.pajemploi.urssaf.fr/pajeweb/mail.htm"
+               class="flex gap-2">
+               <BiMailSend className="text-white h-6 w-6 align-middle" />Lien
+               direct vers le formulaire de contact
+            </a>
          </div>
       </div>
    </section>
