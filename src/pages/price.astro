@@ -16,21 +16,71 @@ import MainLayout from '../layouts/MainLayout.astro';
       <h2 class="text-white text-center">
          Variables selon les nombres d'heures de garde.
       </h2>
-      <p class="text-white">Son ....</p>
 
-      <h2 class="text-yellow-300 text-center">Voici....</h2>
-      <ul class="text-white list-none">
-         <li class="text-white">
-            <strong class="text-2xl text-yellow-300"> ....</strong>
-            .....
-         </li>
-         <li class="text-white">
-            <strong class="text-2xl text-yellow-300">....</strong> : ...
-         </li>
-         <li class="text-white">
-            <strong class="text-2xl text-yellow-300">...</strong> : ....
-         </li>
-      </ul>
+      <div class="relative">
+         <table class="w-full text-sm text-center">
+            <thead class="text-base text-blue-700 bg-green-300">
+               <tr>
+                  <th scope="col" class="px-3 py-3">Heures/mois</th>
+                  <th scope="col" class="px-3 py-3"> Taux/Heure net</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr
+                  class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+                  <th
+                     scope="row"
+                     class="px-3 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                     >Entre 60 & 80
+                  </th>
+                  <td class="px-3 py-4 font-bold text-white"> 5.20€</td>
+               </tr>
+               <tr
+                  class="border-b bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+                  <th
+                     scope="row"
+                     class="px-3 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                     Entre 81 & 100
+                  </th>
+                  <td class="px-3 py-4 font-bold text-white">
+                     de 4.80€ à 5.20€</td
+                  >
+               </tr>
+               <tr
+                  class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+                  <th
+                     scope="row"
+                     class="px-3 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                     Entre 101 & 139
+                  </th>
+                  <td class="px-3 py-4 font-bold text-white"
+                     >de 4.40€ à 4.80€</td
+                  >
+               </tr>
+               <tr
+                  class="border-b bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+                  <th
+                     scope="row"
+                     class="px-3 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                     Entre 140 & 159
+                  </th>
+                  <td class="px-3 py-4 font-bold text-white">de 4.00 à 4.40€</td
+                  >
+               </tr>
+               <tr
+                  class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+                  <th
+                     scope="row"
+                     class="px-3 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                     160 et au-delà
+                  </th>
+                  <td class="px-3 py-4 font-bold text-white"
+                     >de 3.90$ à 4.10€</td
+                  >
+               </tr>
+            </tbody>
+         </table>
+      </div>
 
       <section class="flex justify-around">
          <div

@@ -46,16 +46,27 @@ import MainLayout from '../layouts/MainLayout.astro';
                3.5€/h</strong
             >
          </li>
+      </ul>
+      <ul class="text-white list-none bg-green-500 rounded-3xl">
          <li class="text-white">
             <strong class="text-xl text-yellow-300">Le calcule sera:</strong>
          </li>
          <li class="text-white">
-            <strong class="text-xl text-yellow-300"
-               >Mensuailisation du salaire = ((44 X 34) / 12) X 3.5</strong
-            >
+            <strong class="text-base text-blue-800"
+               >Mensuailisation du salaire = (44 semaines X 34h eures) / 12 mois
+               nous donne une moyenne de 125 heure / mois
+            </strong>
+         </li>
+         <li class="text-white">
+            <strong class="text-base text-blue-800"
+               >Nous multiplions 125 par 3.5€
+            </strong>
          </li>
       </ul>
-      <h3 class="text-yellow-300 text-center">Ce qui nous donne 406,33€</h3>
+
+      <h3 class="text-yellow-300 text-center text-2xl font-bold mt-3">
+         Ce qui nous donne 437.50€
+      </h3>
       <section class="flex justify-around">
          <div
             role="status"
@@ -85,7 +96,6 @@ import MainLayout from '../layouts/MainLayout.astro';
             type="button"
             class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             Mon taux horaire varie selon le nombres d'heures effectifs par mois
-
             <svg
                aria-hidden="true"
                class="w-5 h-5 ml-2 -mr-1"

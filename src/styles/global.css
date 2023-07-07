@@ -41,7 +41,7 @@ body {
       left: 0;
       width: 100%;
       background: rgb(33, 197, 94);
-      opacity: 1;
+      /* opacity: 1; */
       border-radius: 0 0 30px 30px;
       color: white;
       /* text-align: center; */
