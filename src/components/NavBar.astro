@@ -2,8 +2,7 @@
 import hero from '../assets/hero.png';
 ---
 
-<nav
-   class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+<nav id="navbar">
    <div
       class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <a href="/" class="flex items-center">
@@ -25,7 +24,7 @@ import hero from '../assets/hero.png';
          aria-controls="navbar-dropdown"
          aria-expanded="false">
          <svg
-            class="w-6 h-6"
+            class="w-6 h-6 text-white bg-gray-800 rounded-2xl"
             aria-hidden="true"
             fill="currentColor"
             viewBox="0 0 20 20"
@@ -36,9 +35,11 @@ import hero from '../assets/hero.png';
                clip-rule="evenodd"></path></svg
          >
       </button>
-      <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+      <div
+         class="hidden w-full md:block md:w-auto font-bold text-xl"
+         id="navbar-dropdown">
          <ul
-            class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            class="flex flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
             <li>
                <button
                   id="dropdownNavbarLink"
@@ -245,3 +246,29 @@ import hero from '../assets/hero.png';
       </div>
    </div>
 </nav>
+<script>
+   // Get the navbar element
+   const navbar = document.getElementById('navbar');
+
+   // Initialize the previous scroll position
+   let prevScrollpos = window.scrollY;
+
+   // Add an event listener to the window object to detect when the user scrolls
+   window.addEventListener('scroll', () => {
+      // Get the current scroll position
+      const currentScrollPos = window.scrollY;
+
+      // Determine the direction of the scroll
+      const isScrollingDown = currentScrollPos > prevScrollpos;
+
+      // Animate the navbar based on the direction of the scroll
+      if (isScrollingDown) {
+         navbar.style.transform = 'translateY(-100%)';
+      } else {
+         navbar.style.transform = 'translateY(0)';
+      }
+
+      // Update the previous scroll position
+      prevScrollpos = currentScrollPos;
+   });
+</script>

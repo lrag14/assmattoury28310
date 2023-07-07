@@ -35,3 +35,20 @@ body {
 
 }
 
+#navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgb(33, 197, 94);
+      opacity: 1;
+      border-radius: 0 0 30px 30px;
+      color: white;
+      /* text-align: center; */
+      z-index: 10;
+
+      /*Define a height for NavBar*/
+      transition: 0.5s;
+      /*and a transition time for a smooth appearence*/
+
+}
