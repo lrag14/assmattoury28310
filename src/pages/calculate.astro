@@ -3,64 +3,24 @@ import MainLayout from '../layouts/MainLayout.astro';
 ---
 
 <MainLayout title="Taux horaire">
-   <section
-      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5">
-      <div class="flex justify-around">
-         <h1
-            class="text-6xl lg:text-5xl md:text-4xl sm:text-3xl xsm:text-2xl font-bold filter drop-shadow-sm text-slate-200 text-start mt-20">
-            A vous de jouer
-         </h1>
-      </div>
-   </section>
-   <article class="format lg:format-lg flex flex-col mx-auto px-2">
-      <form>
-         <div class="grid gap-6 mb-6 md:grid-cols-2">
-            <div>
-               <label
-                  for="visitors"
-                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >xxx</label
-               >
-               <input
-                  type="number"
-                  id="visitors"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder=""
-               />
-            </div>
-
-            <div>
-               <label
-                  for="visitors"
-                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >XXX</label
-               >
-               <input
-                  type="number"
-                  id="visitors"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder=""
-               />
-            </div>
-            <div>
-               <label
-                  for="visitors"
-                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >XXX</label
-               >
-               <input
-                  type="number"
-                  id="visitors"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder=""
-               />
-            </div>
-            <button
-               type="submit"
-               class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-               >Submit</button
-            >
-         </div>
-      </form>
-   </article>;
+  <section
+    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5">
+    <div class="flex justify-around">
+      <h1
+        class="text-6xl lg:text-5xl md:text-4xl sm:text-3xl xsm:text-2xl font-bold filter drop-shadow-sm text-slate-200 text-start mt-20">
+        A vous de jouer en renseignant les champs sur une base mensuelle
+      </h1>
+    </div>
+  </section>
+  <article class="format lg:format-lg flex flex-col mx-auto px-2">
+    <script>
+      function calculateSalary() {
+        const hoursMonth = document.getElementById('hoursMonth').value;
+        const daysMonth = document.getElementById('daysMonth').value;
+        const indemnity = document.getElementById('indemnity').value;
+        const salary = hoursMonth * daysMonth * indemnity;
+        document.getElementById('result').innerHTML = salary;
+      }
+    </script>
+  </article>
 </MainLayout>
