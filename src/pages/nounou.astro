@@ -3,111 +3,109 @@ import MainLayout from '../layouts/MainLayout.astro';
 ---
 
 <MainLayout title="NounouTop">
-   <section
-      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5">
-      <div class="flex justify-around">
-         <h1
-            class="text-6xl lg:text-5xl md:text-4xl sm:text-3xl xsm:text-2xl font-bold filter drop-shadow-sm text-slate-200 text-start mt-20">
-            Nounou-top
-         </h1>
+  <section
+    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5">
+    <div class="flex justify-around">
+      <h1
+        class="text-6xl lg:text-5xl md:text-4xl sm:text-3xl xsm:text-2xl font-bold filter drop-shadow-sm text-slate-200 text-start mt-20">
+        Nounou-top
+      </h1>
+    </div>
+  </section>
+  <article class="format lg:format-lg flex flex-col mx-auto px-2">
+    <h2 class="text-white text-center">Partenaires privilégié</h2>
+    <p class="text-white">
+      Nounou-Top facilite la création et la gestion des contrats avec les
+      familles, offrant ainsi une certaine sécurité juridique. Je tiens un
+      relevé des heures de garde effectuées chaque jour pour chaque enfant.
+      J'enregistre ces informations dans mon espace personnel sur la plateforme.
+      À la fin de chaque mois, je valide les heures de garde enregistrées.
+    </p>
+
+    <h3 class="text-yellow-300 text-center">
+      Commencez par calculer le nombre de semaine de garde effective sur
+      l'année. NE pas comptabiliser vos vacances, vos RTT ...
+    </h3>
+
+    <ul class="text-white list-none">
+      <li class="text-white">
+        Comptez le nombre de semaines de garde. Exemple:
+
+        <strong class="text-xl text-yellow-300"> 44 semaines</strong>
+      </li>
+      <li class="text-white">
+        Comptabiliser les heures de gardes par semaine. Exemple:<strong
+          class="text-xl text-yellow-300">
+          34 heures</strong
+        >
+      </li>
+      <li class="text-white">
+        Taux horaire pratiqué. Exemple:<strong class="text-xl text-yellow-300">
+          5€/h</strong
+        >
+      </li>
+    </ul>
+    <ul class="text-white list-none bg-green-500 rounded-3xl">
+      <li class="text-white">
+        <strong class="text-xl text-yellow-300">Le calcule sera:</strong>
+      </li>
+      <li class="text-white">
+        <strong class="text-base text-blue-800"
+          >Mensuailisation du salaire = (44 semaines X 34h eures) / 12 mois nous
+          donne une moyenne de 125 heure / mois
+        </strong>
+      </li>
+      <li class="text-white">
+        <strong class="text-base text-blue-800"
+          >Nous multiplions 125 par 5€
+        </strong>
+      </li>
+    </ul>
+
+    <h3 class="text-yellow-300 text-center text-2xl font-bold mt-3">
+      Ce qui nous donne 625€
+    </h3>
+    <section class="flex justify-around">
+      <div
+        role="status"
+        class="space-y-2 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-start m-2">
+        <div
+          class="flex items-center justify-center w-auto h-auto rounded sm:w-96">
+          <img
+            src="https://res.cloudinary.com/dgakih33l/image/upload/v1688440418/assmattoury/wonder_1677493588863_hkcmcj.jpg"
+            class="h-auto' w-auto rounded-2xl"
+            alt="calcul"
+          />
+        </div>
+        <div class="w-full">
+          <div>
+            <h3
+              class="text-yellow-300 lg:pt-24 lg:text-2xl md:pt-24 md:text-2xl">
+              Nous avons maintenant tout le nécessaire afin de remplir le
+              contrat.
+            </h3>
+          </div>
+        </div>
       </div>
-   </section>
-   <article class="format lg:format-lg flex flex-col mx-auto px-2">
-      <h2 class="text-white text-center">Partenaires privilégié</h2>
-      <p class="text-white">
-         Nounou-Top facilite la création et la gestion des contrats avec les
-         familles, offrant ainsi une certaine sécurité juridique. Je tiens un
-         relevé des heures de garde effectuées chaque jour pour chaque enfant.
-         J'enregistre ces informations dans mon espace personnel sur la
-         plateforme. À la fin de chaque mois, je valide les heures de garde
-         enregistrées.
-      </p>
+    </section>
 
-      <h3 class="text-yellow-300 text-center">
-         Commencez par calculer le nombre de semaine de garde effective sur
-         l'année. NE pas comptabiliser vos vacances, vos RTT ...
-      </h3>
-
-      <ul class="text-white list-none">
-         <li class="text-white">
-            Comptez le nombre de semaines de garde. Exemple:
-
-            <strong class="text-xl text-yellow-300"> 44 semaines</strong>
-         </li>
-         <li class="text-white">
-            Comptabiliser les heures de gardes par semaine. Exemple:<strong
-               class="text-xl text-yellow-300">
-               34 heures</strong
-            >
-         </li>
-         <li class="text-white">
-            Taux horaire pratiqué. Exemple:<strong
-               class="text-xl text-yellow-300">
-               3.5€/h</strong
-            >
-         </li>
-      </ul>
-      <ul class="text-white list-none bg-green-500 rounded-3xl">
-         <li class="text-white">
-            <strong class="text-xl text-yellow-300">Le calcule sera:</strong>
-         </li>
-         <li class="text-white">
-            <strong class="text-base text-blue-800"
-               >Mensuailisation du salaire = (44 semaines X 34h eures) / 12 mois
-               nous donne une moyenne de 125 heure / mois
-            </strong>
-         </li>
-         <li class="text-white">
-            <strong class="text-base text-blue-800"
-               >Nous multiplions 125 par 3.5€
-            </strong>
-         </li>
-      </ul>
-
-      <h3 class="text-yellow-300 text-center text-2xl font-bold mt-3">
-         Ce qui nous donne 437.50€
-      </h3>
-      <section class="flex justify-around">
-         <div
-            role="status"
-            class="space-y-2 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-start m-2">
-            <div
-               class="flex items-center justify-center w-auto h-auto rounded sm:w-96">
-               <img
-                  src="https://res.cloudinary.com/dgakih33l/image/upload/v1688440418/assmattoury/wonder_1677493588863_hkcmcj.jpg"
-                  class="h-auto' w-auto rounded-2xl"
-                  alt="calcul"
-               />
-            </div>
-            <div class="w-full">
-               <div>
-                  <h3
-                     class="text-yellow-300 lg:pt-24 lg:text-2xl md:pt-24 md:text-2xl">
-                     Nous avons maintenant tout le nécessaire afin de remplir le
-                     contrat.
-                  </h3>
-               </div>
-            </div>
-         </div>
-      </section>
-
-      <a href="/price" class="text-white no-underline text-right"
-         ><button
-            type="button"
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Mon taux horaire varie selon le nombres d'heures effectifs par mois
-            <svg
-               aria-hidden="true"
-               class="w-5 h-5 ml-2 -mr-1"
-               fill="currentColor"
-               viewBox="0 0 20 20"
-               xmlns="http://www.w3.org/2000/svg"
-               ><path
-                  fill-rule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd"></path></svg
-            >
-         </button></a
-      >
-   </article>
+    <a href="/price" class="text-white no-underline text-right"
+      ><button
+        type="button"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        Mon taux horaire varie selon le nombres d'heures effectifs par mois
+        <svg
+          aria-hidden="true"
+          class="w-5 h-5 ml-2 -mr-1"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          ><path
+            fill-rule="evenodd"
+            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+            clip-rule="evenodd"></path></svg
+        >
+      </button></a
+    >
+  </article>
 </MainLayout>
