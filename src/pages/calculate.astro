@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+const indemnity = 4;
 ---
 
 <MainLayout title="Taux horaire">
@@ -18,15 +19,17 @@ import MainLayout from '../layouts/MainLayout.astro';
         <div class="grid md:grid-cols-2 md:gap-6">
           <div class="relative z-0 w-full mb-6 group">
             <label
-              for="username-success"
+              for="yearweek-success"
               class="block mb-2 text-sm font-medium text-white"
               >Nombre de semaines de garde annuel</label
             >
             <input
               type="number"
-              id="username-success"
+              id="yearweek-success"
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder=""
+              placeholder="48 Maximun"
+              min="1"
+              max="48"
             />
           </div>
           <div class="relative z-0 w-full mb-6 group">
@@ -72,7 +75,7 @@ import MainLayout from '../layouts/MainLayout.astro';
               name="dayindem"
               id="dayindem"
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              value="4"
+              value={indemnity}
               readonly
             />
           </div>

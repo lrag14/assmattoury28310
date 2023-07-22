@@ -38,6 +38,9 @@ dependencies:
   astro-seo:
     specifier: ^0.7.4
     version: 0.7.4
+  dompurify:
+    specifier: ^3.0.5
+    version: 3.0.5
   flowbite:
     specifier: ^1.6.6
     version: 1.6.6
@@ -1753,6 +1756,10 @@ packages:
     engines: {node: '>= 4'}
     dependencies:
       domelementtype: 2.3.0
+    dev: false
+
+  /dompurify@3.0.5:
+    resolution: {integrity: sha512-F9e6wPGtY+8KNMRAVfxeCOHU0/NPWMSENNq4pQctuXRqqdEPW7q3CrLbR5Nse044WwacyjHGOMlvNsBe1y6z9A==}
     dev: false
 
   /domutils@2.8.0:
