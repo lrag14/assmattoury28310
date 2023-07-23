@@ -4,54 +4,53 @@ const indemnity = 4;
 ---
 
 <MainLayout title="Entretien">
-   <section
-      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5">
-      <div class="flex justify-around">
-         <h1
-            class="text-6xl lg:text-5xl md:text-4xl sm:text-3xl xsm:text-2xl font-bold filter drop-shadow-sm text-slate-200 text-start mt-20">
-            Les indemnités d'entretien
-         </h1>
-      </div>
-   </section>
-   <article class="format lg:format-lg flex flex-col mx-auto px-2">
-      <h2 class="text-white text-center">Elles correspondent à..</h2>
-      <p class="text-white">
-         Une compensation pour les frais liés à l'accueil de l'enfant, les
-         produits d'hygiène, l'utilisation des jouets, etc. Le montant de ces
-         indemnités est généralement déterminé par accord entre les parents et
-         l'assistante maternelle, et il sera fixé par jour de présence de
-         l'enfant.
-      </p>
-      <section class="flex justify-around">
-         <div
-            role="status"
-            class="space-y-2 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-start">
-            <div class="w-auto h-auto sm:w-96">
-               <img
-                  src="https://res.cloudinary.com/dgakih33l/image/upload/v1688657523/wonder_1688637062660_gnybw5.jpg"
-                  class="h-auto w-auto rounded-xl"
-                  alt="une famille nounours"
-               />
-            </div>
+  <section
+    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5">
+    <div class="flex justify-around">
+      <h1
+        class="text-3xl lg:text-5xl md:text-4xl sm:text-3xl xsm:text-2xl font-bold filter drop-shadow-sm text-slate-200 text-start mt-20">
+        Les indemnités d'entretien
+      </h1>
+    </div>
+  </section>
+  <article class="format lg:format-lg flex flex-col mx-auto px-2">
+    <h2 class="text-white text-center">Elles correspondent à..</h2>
+    <p class="text-white">
+      Une compensation pour les frais liés à l'accueil de l'enfant, les produits
+      d'hygiène, l'utilisation des jouets, etc. Le montant de ces indemnités est
+      généralement déterminé par accord entre les parents et l'assistante
+      maternelle, et il sera fixé par jour de présence de l'enfant.
+    </p>
+    <section class="flex justify-around">
+      <div
+        role="status"
+        class="space-y-2 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-start">
+        <div class="w-auto h-auto sm:w-96">
+          <img
+            src="https://res.cloudinary.com/dgakih33l/image/upload/v1688657523/wonder_1688637062660_gnybw5.jpg"
+            class="h-auto w-auto rounded-xl"
+            alt="une famille nounours"
+          />
+        </div>
 
-            <section>
-               <div class="flex justify-center items-center">
-                  <a
-                     class="block justify-center align-middle w-60 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-blue-800 hover:bg-pink-600 lg:mt-10 md:mt-10 sm:mt-0">
-                     <h5
-                        class="mb-2 text-2xl font-bold tracking-tight text-center dark:text-white no-underline">
-                        Indemnité d'entretien par jour de présence.
-                     </h5>
-                     <ul
-                        class="font-normal text-gray-700 dark:text-yellow-400 list-none">
-                        <li class="text-3xl font-bold">
-                           {indemnity}€ / jour
-                        </li>
-                     </ul>
-                  </a>
-               </div>
-            </section>
-         </div>
-      </section>
-   </article>
+        <section>
+          <div class="flex justify-center items-center">
+            <a
+              class="block justify-center align-middle w-60 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-blue-800 hover:bg-pink-600 lg:mt-10 md:mt-10 sm:mt-0">
+              <h5
+                class="mb-2 text-2xl font-bold tracking-tight text-center dark:text-white no-underline">
+                Indemnité d'entretien par jour de présence.
+              </h5>
+              <ul
+                class="font-normal text-gray-700 dark:text-yellow-400 list-none">
+                <li class="text-3xl font-bold">
+                  {indemnity}€ / jour
+                </li>
+              </ul>
+            </a>
+          </div>
+        </section>
+      </div>
+    </section>
+  </article>
 </MainLayout>

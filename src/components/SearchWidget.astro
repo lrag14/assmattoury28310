@@ -1,9 +1,18 @@
-<aside>
-  <form class="form">
+<aside class="mt-24">
+  <form class="form grid gap-1 border-2 max-w-2xl rounded-xl p-4">
+    <div>
+      <label
+        for="search"
+        class="text-3xl lg:text-5xl md:text-4xl sm:text-3xl xsm:text-2xl font-bold filter drop-shadow-sm text-slate-200 text-start mt-20"
+        >Rechercher sur le site</label
+      >
+      <span>Entrer un mot ou une phrase</span>
+    </div>
     <input
       type="search"
       required
       min="2"
+      max="30"
       name="search"
       id="search"
       placeholder="Recherche"

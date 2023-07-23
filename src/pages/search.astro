@@ -1,0 +1,59 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import SearchWidget from '../components/SearchWidget.astro';
+---
+
+<MainLayout title="searchpage">
+  <section
+    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5 pb-36">
+    <div class="flex justify-around">
+      <SearchWidget />
+    </div>
+  </section>
+  <article class="format lg:format-lg flex flex-col mx-auto px-2">
+    <aside class="form">
+      <input
+        type="search"
+        required
+        min="2"
+        name="search"
+        id="search"
+        placeholder="Recherche"
+        class="rounded px-2 text-blue-500"
+      />
+    </aside>
+
+    <p id="searchReadout"></p>
+  </article>
+  <script>
+    import DOMPurify from 'dompurify';
+    // selection
+    const search = document.querySelector('#search');
+    const searchReadout = document.querySelector('#searchReadout');
+
+    // fonction
+
+    function updateDocumentTitle(search) {
+      document.title = search
+        ? `Résultat des recherches pour"${search}"`
+        : 'Recherche pour';
+    }
+    function updateSearchReadout(search) {
+      searchReadout.textContent = search ? `Recherche pour "${search}"` : '';
+    }
+    // evenement lu
+    window.addEventListener('DOMContentLoaded', () => {
+      const urlParams = DOMPurify.sanitize(
+        new URLSearchParams(window.location.search).get('q'),
+      );
+      updateDocumentTitle(urlParams);
+      // updateDReadout(urlParams);
+      search.value = urlParams;
+      search.focus();
+    });
+    search.addEventListener('input', () => {
+      const searchTerm = DOMPurify.sanitize(search.value);
+      updateDocumentTitle(searchTerm);
+    });
+  </script>
+</MainLayout>

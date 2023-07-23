@@ -1,118 +1,114 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 const cafRessource = {
-   firstRessourc: 506,
-   secondRessourc: 319.07,
-   thirthRessourc: 191.42,
+  firstRessourc: 506,
+  secondRessourc: 319.07,
+  thirthRessourc: 191.42,
 };
 const { firstRessourc, secondRessourc, thirthRessourc } = cafRessource;
 ---
 
 <MainLayout title="Vos droits">
-   <title>
-      CMG - Complément de libre choix du mode de garde |
-      assmattoury.netlify.app/caf/
-   </title>
-   <meta
-      name="description"
-      content="Découvrez le complément de libre choix du mode de garde (CMG) versé sous conditions par la CAF. Le montant varie en fonction des plafonds de ressources. Informations sur le barème CMG pour l'embauche directe d'une assistante maternelle."
-   />
+  <title>
+    CMG - Complément de libre choix du mode de garde |
+    assmattoury.netlify.app/caf/
+  </title>
+  <meta
+    name="description"
+    content="Découvrez le complément de libre choix du mode de garde (CMG) versé sous conditions par la CAF. Le montant varie en fonction des plafonds de ressources. Informations sur le barème CMG pour l'embauche directe d'une assistante maternelle."
+  />
 
-   <meta
-      property="og:title"
-      content="CMG - Complément de libre choix du mode de garde | assmattoury.netlify.app/caf/"
-   />
-   <meta
-      property="og:description"
-      content="Découvrez le complément de libre choix du mode de garde (CMG) versé sous conditions par la CAF. Le montant varie en fonction des plafonds de ressources. Informations sur le barème CMG pour l'embauche directe d'une assistante maternelle."
-   />
-   <meta property="og:url" content="https://assmattoury.netlify.app/caf/" />
-   <section
-      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5">
-      <div class="flex justify-around">
-         <h1
-            class="text-6xl lg:text-5xl md:text-4xl sm:text-3xl xsm:text-2xl font-bold filter drop-shadow-sm text-slate-200 text-start mt-20">
-            CMG
-         </h1>
+  <meta
+    property="og:title"
+    content="CMG - Complément de libre choix du mode de garde | assmattoury.netlify.app/caf/"
+  />
+  <meta
+    property="og:description"
+    content="Découvrez le complément de libre choix du mode de garde (CMG) versé sous conditions par la CAF. Le montant varie en fonction des plafonds de ressources. Informations sur le barème CMG pour l'embauche directe d'une assistante maternelle."
+  />
+  <meta property="og:url" content="https://assmattoury.netlify.app/caf/" />
+  <section
+    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5">
+    <div class="flex justify-around">
+      <h1
+        class="text-3xl lg:text-5xl md:text-4xl sm:text-3xl xsm:text-2xl font-bold filter drop-shadow-sm text-slate-200 text-start mt-20">
+        CMG
+      </h1>
+    </div>
+  </section>
+  <article class="format lg:format-lg flex flex-col mx-auto px-2">
+    <h2 class="text-white text-center">
+      Le complément de libre choix du mode de garde (CMG 2023) est versé sous
+      conditions par la CAF
+    </h2>
+    <p class="text-white">
+      Son montant varie en fonction de plafonds de ressources. <br />Les revenus
+      pris en compte sont ceux de l'année N-2 indiqués sur l'avis d'imposition
+      N-1. Dans tous les cas, les parents doivent supporter au moins 15 % du
+      salaire versé.
+    </p>
+
+    <h2 class="text-yellow-300 text-center">
+      Voici le barème du CMG en cas d'embauche directe d'une assistante
+      maternelle. Chaque enfant gardé donne droit à l'aide mentionnée.
+    </h2>
+    <ul class="text-white list-none">
+      <li class="text-white">
+        <strong class="text-2xl text-yellow-300">{firstRessourc} euros</strong>
+        : en cas de ressources inférieures ou égales à 21 661 euros
+      </li>
+      <li class="text-white">
+        <strong class="text-2xl text-yellow-300">{secondRessourc} euros</strong>
+        : en cas de ressources comprises entre 21 661 et 48 135 euros
+      </li>
+      <li class="text-white">
+        <strong class="text-2xl text-yellow-300">{thirthRessourc} euros</strong>
+        : en cas de ressources supérieures à 48 135 euros
+      </li>
+    </ul>
+
+    <section class="flex justify-around">
+      <div
+        role="status"
+        class="space-y-2 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-start m-2">
+        <div
+          class="flex items-center justify-center w-auto h-auto rounded sm:w-96">
+          <img
+            src="https://res.cloudinary.com/dgakih33l/image/upload/v1688440084/assmattoury/calcul_dboun5.jpg"
+            class="h-auto w-auto rounded-2xl"
+            alt="calcul"
+          />
+        </div>
+        <div class="w-full">
+          <div>
+            <h3
+              class="text-yellow-300 lg:pt-24 lg:text-2xl md:pt-24 md:text-2xl">
+              Selon vos revenus, le montant indiqué sera donc pris en charge par
+              votre CAF
+            </h3>
+          </div>
+        </div>
       </div>
-   </section>
-   <article class="format lg:format-lg flex flex-col mx-auto px-2">
-      <h2 class="text-white text-center">
-         Le complément de libre choix du mode de garde (CMG 2023) est versé sous
-         conditions par la CAF
-      </h2>
-      <p class="text-white">
-         Son montant varie en fonction de plafonds de ressources. <br />Les
-         revenus pris en compte sont ceux de l'année N-2 indiqués sur l'avis
-         d'imposition N-1. Dans tous les cas, les parents doivent supporter au
-         moins 15 % du salaire versé.
-      </p>
+    </section>
 
-      <h2 class="text-yellow-300 text-center">
-         Voici le barème du CMG en cas d'embauche directe d'une assistante
-         maternelle. Chaque enfant gardé donne droit à l'aide mentionnée.
-      </h2>
-      <ul class="text-white list-none">
-         <li class="text-white">
-            <strong class="text-2xl text-yellow-300"
-               >{firstRessourc} euros</strong
-            >
-            : en cas de ressources inférieures ou égales à 21 661 euros
-         </li>
-         <li class="text-white">
-            <strong class="text-2xl text-yellow-300"
-               >{secondRessourc} euros</strong
-            > : en cas de ressources comprises entre 21 661 et 48 135 euros
-         </li>
-         <li class="text-white">
-            <strong class="text-2xl text-yellow-300"
-               >{thirthRessourc} euros</strong
-            > : en cas de ressources supérieures à 48 135 euros
-         </li>
-      </ul>
+    <a href="/pajemploi" class="text-white no-underline text-right"
+      ><button
+        type="button"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        L'inscription à Pajemploi+
 
-      <section class="flex justify-around">
-         <div
-            role="status"
-            class="space-y-2 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-start m-2">
-            <div
-               class="flex items-center justify-center w-auto h-auto rounded sm:w-96">
-               <img
-                  src="https://res.cloudinary.com/dgakih33l/image/upload/v1688440084/assmattoury/calcul_dboun5.jpg"
-                  class="h-auto w-auto rounded-2xl"
-                  alt="calcul"
-               />
-            </div>
-            <div class="w-full">
-               <div>
-                  <h3
-                     class="text-yellow-300 lg:pt-24 lg:text-2xl md:pt-24 md:text-2xl">
-                     Selon vos revenus, le montant indiqué sera donc pris en
-                     charge par votre CAF
-                  </h3>
-               </div>
-            </div>
-         </div>
-      </section>
-
-      <a href="/pajemploi" class="text-white no-underline text-right"
-         ><button
-            type="button"
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            L'inscription à Pajemploi+
-
-            <svg
-               aria-hidden="true"
-               class="w-5 h-5 ml-2 -mr-1"
-               fill="currentColor"
-               viewBox="0 0 20 20"
-               xmlns="http://www.w3.org/2000/svg"
-               ><path
-                  fill-rule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd"></path></svg
-            >
-         </button></a
-      >
-   </article>
+        <svg
+          aria-hidden="true"
+          class="w-5 h-5 ml-2 -mr-1"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          ><path
+            fill-rule="evenodd"
+            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+            clip-rule="evenodd"></path></svg
+        >
+      </button></a
+    >
+  </article>
 </MainLayout>
