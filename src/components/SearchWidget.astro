@@ -1,18 +1,16 @@
-<aside class="mt-24">
-  <form class="form grid gap-1 border-2 max-w-2xl rounded-xl p-4">
+<aside>
+  <form class="form">
     <div>
-      <label
-        for="search"
-        class="text-3xl lg:text-5xl md:text-4xl sm:text-3xl xsm:text-2xl font-bold filter drop-shadow-sm text-slate-200 text-start mt-20"
-        >Rechercher sur le site</label
-      >
-      <span>Entrer un mot ou une phrase</span>
+      <label for="search">Recherche sur le site</label>
+      <div>
+        <span class="text-yellow-300">Entrer un mot ou une phrase</span>
+      </div>
     </div>
     <input
       type="search"
       required
       min="2"
-      max="30"
+      max="24"
       name="search"
       id="search"
       placeholder="Recherche"
@@ -25,8 +23,11 @@
   const form = document.querySelector('form');
   form?.addEventListener('submit', (e) => {
     e.preventDefault();
+    console.log(e.target);
     const formData = new FormData(form);
     const searchTerm = DOMPurify.sanitize(formData.get('search')?.toString());
+    console.log('addEvent', formData.get('search'));
+
     if (!searchTerm || searchTerm.length === 0) return;
     const url = new URL('/search', window.location.origin);
     url.searchParams.set('q', searchTerm);

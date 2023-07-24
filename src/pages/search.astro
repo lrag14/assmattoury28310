@@ -1,59 +1,101 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro';
-import SearchWidget from '../components/SearchWidget.astro';
+import '../styles/global.css';
+import NavBar from '../components/NavBar.astro';
+import Footer from '../components/Footer.astro';
+
+const { title } = Astro.props;
 ---
 
-<MainLayout title="searchpage">
-  <section
-    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5 pb-36">
-    <div class="flex justify-around">
-      <SearchWidget />
-    </div>
-  </section>
-  <article class="format lg:format-lg flex flex-col mx-auto px-2">
-    <aside class="form">
-      <input
-        type="search"
-        required
-        min="2"
-        name="search"
-        id="search"
-        placeholder="Recherche"
-        class="rounded px-2 text-blue-500"
-      />
-    </aside>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
 
-    <p id="searchReadout"></p>
-  </article>
-  <script>
-    import DOMPurify from 'dompurify';
-    // selection
-    const search = document.querySelector('#search');
-    const searchReadout = document.querySelector('#searchReadout');
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
 
-    // fonction
+    <title>{title}</title>
+  </head>
+  <body>
+    <NavBar />
+    <section
+      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5">
+      <div class="flex justify-around">
+        <h1
+          class="text-3xl lg:text-5xl md:text-4xl sm:text-3xl xsm:text-2xl font-bold filter drop-shadow-sm text-slate-200 text-start mt-20">
+          Un mot, une phrase...
+        </h1>
+      </div>
+    </section>
+    <article class="format lg:format-lg flex flex-col mx-auto px-2">
+      <div>
+        <aside class="form">
+          <div>
+            <label for="search">Recherche sur le site</label>
+            <div>
+              <span class="text-yellow-300">EN COURS DE PROGRAMMATION</span>
+            </div>
+          </div>
+          <input
+            type="search"
+            required
+            min="2"
+            max="24"
+            name="search"
+            id="search"
+            placeholder="Recherche"
+            class="rounded px-2 text-blue-500"
+          />
+        </aside>
+        <p class="forma" id="searchReadout"></p>
+        <section aria-label="Search Result">
+          <ul></ul>
+        </section>
+      </div>
+    </article>
+    <Footer />
+    <script>
+      // imports
+      import DOMPurify from 'dompurify';
 
-    function updateDocumentTitle(search) {
-      document.title = search
-        ? `Résultat des recherches pour"${search}"`
-        : 'Recherche pour';
-    }
-    function updateSearchReadout(search) {
-      searchReadout.textContent = search ? `Recherche pour "${search}"` : '';
-    }
-    // evenement lu
-    window.addEventListener('DOMContentLoaded', () => {
-      const urlParams = DOMPurify.sanitize(
-        new URLSearchParams(window.location.search).get('q'),
-      );
-      updateDocumentTitle(urlParams);
-      // updateDReadout(urlParams);
-      search.value = urlParams;
-      search.focus();
-    });
-    search.addEventListener('input', () => {
-      const searchTerm = DOMPurify.sanitize(search.value);
-      updateDocumentTitle(searchTerm);
-    });
-  </script>
-</MainLayout>
+      // selectors
+      const search = document.querySelector('#search');
+      const searchReadout = document.querySelector('#searchReadout');
+
+      // functions
+      function updateDocumentTitle(search) {
+        document.title = search
+          ? `Search results for “${search}”`
+          : 'Search the Blog';
+      }
+
+      function updateSearchReadout(search) {
+        searchReadout.textContent = search
+          ? `Résultat de la recherche pour  “${search}”`
+          : '';
+      }
+
+      // event listeners
+      window.addEventListener('DOMContentLoaded', () => {
+        const urlParams = DOMPurify.sanitize(
+          new URLSearchParams(window.location.search).get('q'),
+        );
+        updateDocumentTitle(urlParams);
+        updateSearchReadout(urlParams);
+        search.value = urlParams;
+        search.focus();
+      });
+
+      search.addEventListener('input', () => {
+        const searchTerm = DOMPurify.sanitize(search.value);
+        updateDocumentTitle(searchTerm);
+        updateSearchReadout(searchTerm);
+      });
+    </script>
+    <script
+      is:inline
+      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"
+    ></script>
+  </body>
+</html>
