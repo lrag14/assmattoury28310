@@ -1,6 +1,7 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 const indemnity = 4;
+const workDay = 20;
 ---
 
 <MainLayout title="Taux horaire">
@@ -82,12 +83,12 @@ const indemnity = 4;
     </section>
     <div>
       <form>
-        <div class="grid md:grid-cols-2 md:gap-6">
+        <div class="grid grid-cols-2 gap-4">
           <div class="relative z-0 w-full mb-6 group">
             <label
               for="yearweek-success"
               class="block mb-2 text-sm font-medium text-white"
-              >Nombre d'heures de garde Mensuel</label
+              >Heures mensuel</label
             >
             <input
               type="number"
@@ -97,6 +98,21 @@ const indemnity = 4;
               min="1"
               max="200"
             />
+          </div><div class="relative z-0 w-full mb-6 group">
+            <label
+              for="helpcaf"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Aide de la CAF €</label
+            >
+            <select
+              id="helpcaf"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+              <option></option>
+              <option>506</option>
+              <option>319</option>
+              <option>191</option>
+              <option>0</option>
+            </select>
           </div>
           <div class="relative z-0 w-full mb-6 group">
             <label
@@ -113,25 +129,23 @@ const indemnity = 4;
               readonly
             />
           </div>
-        </div>
-        <div class="grid md:grid-cols-2 md:gap-6">
           <div class="relative z-0 w-full mb-6 group">
             <label
-              for="helpcaf"
+              for="hourrate"
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >Selectionner votre aide de la CAF €</label
+              >Moyenne Nb jours travaillé / Mois</label
             >
-            <select
-              id="helpcaf"
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-              <option></option>
-              <option>506</option>
-              <option>319</option>
-              <option>191</option>
-              <option>0</option>
-            </select>
+            <input
+              type="number"
+              name="dayindem"
+              id="dayindem"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              value={workDay}
+              readonly
+            />
           </div>
         </div>
+        <div class="grid grid-cols-2 gap-6"></div>
       </form>
     </div>
     <p id="priceNumber" class="text-white"></p>
