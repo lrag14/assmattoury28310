@@ -19,86 +19,110 @@ const { smallDej, dej, gouter, diner } = rates;
       class="text-3xl lg:text-5xl md:text-4xl sm:text-3xl xsm:text-2xl font-bold filter drop-shadow-sm text-slate-200 text-start mt-20">
       Tarifs repas 2023 {title}
     </div>
+  </section>
+  <article>
     <div>
       <p class="text-yellow-300 text-2xl mt-5 text-center">
         Si vous préparer vous mêmes ses repas, cette partie ne sera qu'a titre
         indicatif
       </p>
     </div>
-  </section>
-  <section class="flex justify-around">
-    <div
-      role="status"
-      class="space-y-2 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-start m-2">
-      <div class="flex items-center justify-center w-auto h-auto sm:w-96">
-        <img
-          src="https://res.cloudinary.com/dgakih33l/image/upload/v1688441289/assmattoury/wonder_1688132192171_tchenx.jpg"
-          class="h-auto rounded-xl pt-8"
-          alt="une famille nounours"
-        />
+
+    <section class="flex justify-around">
+      <div
+        role="status"
+        class="space-y-2 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-start m-2">
+        <div class="flex items-center justify-center w-auto h-auto sm:w-96">
+          <img
+            src="https://res.cloudinary.com/dgakih33l/image/upload/v1688441289/assmattoury/wonder_1688132192171_tchenx.jpg"
+            class="h-auto rounded-xl pt-8"
+            alt="une famille nounours"
+          />
+        </div>
+
+        <section>
+          <div class="mt-5 flex justify-around flex-wrap gap-2">
+            <a
+              class="block w-60 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-blue-800 hover:bg-pink-600">
+              <h5
+                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Le petit-déjeuner
+              </h5>
+              <ul class="font-normal text-gray-700 dark:text-yellow-400">
+                <li>Bol chocolaté ou laitage</li>
+                <li>Fruit ou jus de fruit</li>
+                <li>Céréales ou gâteau</li>
+                <li class="pt-3">
+                  {smallDej}€ / jour
+                </li>
+              </ul>
+            </a>
+            <a
+              class="block w-60 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-blue-800 hover:bg-pink-600">
+              <h5
+                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Le déjeuner
+              </h5>
+              <ul class="font-normal text-gray-700 dark:text-yellow-400">
+                <li>Viande ou poisson</li>
+                <li>Légume ou féculent</li>
+                <li>Laitage et/ou fruit</li>
+                <li class="pt-3">{dej}€ / jour</li>
+              </ul>
+            </a>
+          </div>
+
+          <div class="mt-5 flex justify-around flex-wrap gap-2">
+            <a
+              class="block w-60 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-blue-800 hover:bg-pink-600">
+              <h5
+                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Le goûter
+              </h5>
+              <ul class="font-normal text-gray-700 dark:text-yellow-400">
+                <li>Au choix</li>
+                <li>Fruit ou compote</li>
+                <li>Gâteau</li>
+                <li class="pt-3">{gouter}€ / jour</li>
+              </ul>
+            </a>
+            <a
+              class="block w-60 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-blue-800 hover:bg-pink-600">
+              <h5
+                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Le dîner
+              </h5>
+              <ul class="font-normal text-gray-700 dark:text-yellow-400">
+                <li>Entrée légumes</li>
+                <li>Féculent</li>
+                <li>Laitage et/ou dessert</li>
+                <li class="pt-3">{diner}€ / jour</li>
+              </ul>
+            </a>
+          </div>
+        </section>
       </div>
+    </section>
+    <section class="format lg:format-lg flex flex-col mx-auto px-2">
+      <a href="/indemnity" class="text-white no-underline text-right"
+        ><button
+          type="button"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          vers les indèmnités journalières
 
-      <section>
-        <div class="mt-5 flex justify-around flex-wrap gap-2">
-          <a
-            class="block w-60 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-blue-800 hover:bg-pink-600">
-            <h5
-              class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Le petit-déjeuner
-            </h5>
-            <ul class="font-normal text-gray-700 dark:text-yellow-400">
-              <li>Bol chocolaté ou laitage</li>
-              <li>Fruit ou jus de fruit</li>
-              <li>Céréales ou gâteau</li>
-              <li class="pt-3">
-                {smallDej}€ / jour
-              </li>
-            </ul>
-          </a>
-          <a
-            class="block w-60 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-blue-800 hover:bg-pink-600">
-            <h5
-              class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Le déjeuner
-            </h5>
-            <ul class="font-normal text-gray-700 dark:text-yellow-400">
-              <li>Viande ou poisson</li>
-              <li>Légume ou féculent</li>
-              <li>Laitage et/ou fruit</li>
-              <li class="pt-3">{dej}€ / jour</li>
-            </ul>
-          </a>
-        </div>
-
-        <div class="mt-5 flex justify-around flex-wrap gap-2">
-          <a
-            class="block w-60 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-blue-800 hover:bg-pink-600">
-            <h5
-              class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Le goûter
-            </h5>
-            <ul class="font-normal text-gray-700 dark:text-yellow-400">
-              <li>Au choix</li>
-              <li>Fruit ou compote</li>
-              <li>Gâteau</li>
-              <li class="pt-3">{gouter}€ / jour</li>
-            </ul>
-          </a>
-          <a
-            class="block w-60 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-blue-800 hover:bg-pink-600">
-            <h5
-              class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Le dîner
-            </h5>
-            <ul class="font-normal text-gray-700 dark:text-yellow-400">
-              <li>Entrée légumes</li>
-              <li>Féculent</li>
-              <li>Laitage et/ou dessert</li>
-              <li class="pt-3">{diner}€ / jour</li>
-            </ul>
-          </a>
-        </div>
-      </section>
-    </div>
-  </section>
+          <svg
+            aria-hidden="true"
+            class="w-5 h-5 ml-2 -mr-1"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+              fill-rule="evenodd"
+              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path></svg
+          >
+        </button></a
+      >
+    </section>
+  </article>
 </MainLayout>

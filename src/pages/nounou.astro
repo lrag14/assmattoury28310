@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+const indemnity = 4;
 ---
 
 <MainLayout title="NounouTop">
@@ -21,50 +22,33 @@ import MainLayout from '../layouts/MainLayout.astro';
       J'enregistre ces informations dans mon espace personnel sur la plateforme.
       À la fin de chaque mois, je valide les heures de garde enregistrées.
     </p>
-
-    <h3 class="text-yellow-300 text-center">
-      Commencez par calculer le nombre de semaine de garde effective sur
-      l'année. NE pas comptabiliser vos vacances, vos RTT ...
-    </h3>
+    <p class="text-white">Exemple :</p>
+    <h4 class="text-yellow-300 text-center">
+      En fin de journée je transmet les heures d'arrivée et de départ de
+      l'enfant et je mentionne si le repas est fourni. Nounou-top fera tous les
+      calcule nécessaire.
+    </h4>
 
     <ul class="text-white list-none">
       <li class="text-white">
-        Comptez le nombre de semaines de garde. Exemple:
+        Journée type, l'enfant arrive à 8h00 et repart à 16h00 :
 
-        <strong class="text-xl text-yellow-300"> 44 semaines</strong>
+        <strong class="text-xl text-yellow-300"> 8h00</strong>
       </li>
       <li class="text-white">
-        Comptabiliser les heures de gardes par semaine. Exemple:<strong
+        Je mentionne si le repas est fourni :<strong
           class="text-xl text-yellow-300">
-          34 heures</strong
+          Oui ou Non</strong
         >
       </li>
       <li class="text-white">
-        Taux horaire pratiqué. Exemple:<strong class="text-xl text-yellow-300">
-          5€/h</strong
+        Les indemnités journalières sont automatiquement ajouté:<strong
+          class="text-xl text-yellow-300">
+          {indemnity}€ par jour de présence</strong
         >
-      </li>
-    </ul>
-    <ul class="text-white list-none bg-green-500 rounded-3xl">
-      <li class="text-white">
-        <strong class="text-xl text-yellow-300">Le calcule sera:</strong>
-      </li>
-      <li class="text-white">
-        <strong class="text-base text-blue-800"
-          >Mensuailisation du salaire = (44 semaines X 34h eures) / 12 mois nous
-          donne une moyenne de 125 heure / mois
-        </strong>
-      </li>
-      <li class="text-white">
-        <strong class="text-base text-blue-800"
-          >Nous multiplions 125 par 5€
-        </strong>
       </li>
     </ul>
 
-    <h3 class="text-yellow-300 text-center text-2xl font-bold mt-3">
-      Ce qui nous donne 625€
-    </h3>
     <section class="flex justify-around">
       <div
         role="status"
@@ -81,8 +65,8 @@ import MainLayout from '../layouts/MainLayout.astro';
           <div>
             <h3
               class="text-yellow-300 lg:pt-24 lg:text-2xl md:pt-24 md:text-2xl">
-              Nous avons maintenant tout le nécessaire afin de remplir le
-              contrat.
+              Vous avez mainteneant tous les renseignements en votre possession
+              afin de pouvoir evaluez vos dépenses.
             </h3>
           </div>
         </div>

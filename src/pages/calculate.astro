@@ -14,6 +14,72 @@ const indemnity = 4;
     </div>
   </section>
   <article class="format lg:format-lg flex flex-col mx-auto px-2">
+    <h3 class="text-yellow-300 text-center">
+      Commencez par calculer le nombre de semaine de garde effective sur
+      l'année. NE pas comptabiliser vos vacances, vos RTT ...
+    </h3>
+
+    <ul class="text-white list-none">
+      <li class="text-white">
+        Comptez le nombre de semaines de garde. Exemple:
+
+        <strong class="text-xl text-yellow-300"> 44 semaines</strong>
+      </li>
+      <li class="text-white">
+        Comptabiliser les heures de gardes par semaine. Exemple:<strong
+          class="text-xl text-yellow-300">
+          34 heures</strong
+        >
+      </li>
+      <li class="text-white">
+        Taux horaire pratiqué. Exemple:<strong class="text-xl text-yellow-300">
+          5€/h</strong
+        >
+      </li>
+    </ul>
+    <ul class="text-white list-none bg-green-500 rounded-3xl">
+      <li class="text-white">
+        <strong class="text-xl text-yellow-300">Le calcule sera:</strong>
+      </li>
+      <li class="text-white">
+        <strong class="text-base text-blue-800"
+          >Mensuailisation du salaire = (44 semaines X 34h eures) / 12 mois nous
+          donne une moyenne de 125 heure / mois
+        </strong>
+      </li>
+      <li class="text-white">
+        <strong class="text-base text-blue-800"
+          >Nous multiplions 125 par 5€
+        </strong>
+      </li>
+    </ul>
+
+    <h3 class="text-yellow-300 text-center text-2xl font-bold mt-3">
+      Ce qui nous donne 625€
+    </h3>
+    <section class="flex justify-around">
+      <div
+        role="status"
+        class="space-y-2 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-start m-2">
+        <div
+          class="flex items-center justify-center w-auto h-auto rounded sm:w-96">
+          <img
+            src="https://res.cloudinary.com/dgakih33l/image/upload/v1688440418/assmattoury/wonder_1677493588863_hkcmcj.jpg"
+            class="h-auto' w-auto rounded-2xl"
+            alt="calcul"
+          />
+        </div>
+        <div class="w-full">
+          <div>
+            <h3
+              class="text-yellow-300 lg:pt-24 lg:text-2xl md:pt-24 md:text-2xl">
+              Nous avons maintenant tout le nécessaire afin de remplir le
+              contrat.
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
     <div>
       <form>
         <div class="grid md:grid-cols-2 md:gap-6">
@@ -75,7 +141,9 @@ const indemnity = 4;
     const number = yearweekSuccess.value;
 
     function calculate_price(number) {
-      if (number <= 80) {
+      if (number <= 59) {
+        return '';
+      } else if (number >= 60 && number <= 80) {
         return 5.2;
       } else if (number > 80 && number <= 100) {
         return 4.8;
@@ -91,7 +159,7 @@ const indemnity = 4;
     yearweekSuccess.addEventListener('input', () => {
       const newNumber = yearweekSuccess.value;
       const newPrice = calculate_price(newNumber);
-      document.getElementById('priceNumber').innerHTML = newPrice; // Update 'priceNumber', not 'number'
+      document.getElementById('priceNumber').innerHTML = newPrice;
     });
   </script>
 </MainLayout>
