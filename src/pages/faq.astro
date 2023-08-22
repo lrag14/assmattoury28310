@@ -40,7 +40,7 @@ const faqs = [
 
 <MainLayout title="Faq">
   <section
-    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5">
+    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5 scroll-animation">
     <div class="flex justify-around">
       <h1
         class="text-3xl lg:text-5xl md:text-4xl sm:text-3xl xsm:text-2xl font-bold filter drop-shadow-sm text-slate-200 text-start mt-20">
@@ -48,7 +48,7 @@ const faqs = [
       </h1>
     </div>
   </section>
-  <section class="bg-yellow-100 m-7 rounded-xl">
+  <section class="bg-yellow-100 m-7 rounded-xl scroll-animation">
     <div id="accordion-collapse" data-accordion="collapse">
       {
         faqs.map((faq, index) => (

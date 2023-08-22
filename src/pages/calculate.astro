@@ -7,24 +7,27 @@ const workDay = 20;
 <MainLayout title="Taux horaire">
   <section
     class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5">
-    <div class="flex justify-around">
+    <div class="flex justify-around scroll-animation">
       <h1
-        class="text-3xl lg:text-5xl md:text-4xl sm:text-3xl xsm:text-2xl font-bold filter drop-shadow-sm text-slate-200 text-start mt-20">
+        class="text-3xl lg:text-5xl md:text-4xl sm:text-3xl xsm:text-2xl font-bold filter drop-shadow-sm text-slate-200 text-start mt-20 scroll-animation">
         A vos calculatrices
       </h1>
     </div>
   </section>
-  <article class="format lg:format-lg flex flex-col mx-auto px-2">
-    <h3 class="text-yellow-300 text-center">
+  <article
+    class="format lg:format-lg flex flex-col mx-auto px-2 scroll-animation">
+    <h3 class="text-yellow-300 text-center scroll-animation">
       Commencez par calculer le nombre de semaines de garde effective sur
       l'année. NE pas comptabiliser vos vacances, vos RTT ...
     </h3>
 
-    <ul class="text-white list-none">
-      <li class="text-white">
+    <ul class="text-white list-none scroll-animation">
+      <li class="text-white scroll-animation">
         Comptez le nombre de semaines de garde. Exemple:
 
-        <strong class="text-xl text-yellow-300"> 44 semaines</strong>
+        <strong class="text-xl text-yellow-300 scroll-animation">
+          44 semaines</strong
+        >
       </li>
       <li class="text-white">
         Comptabiliser les heures de garde par semaine. Exemple:<strong
@@ -32,51 +35,54 @@ const workDay = 20;
           34 heures</strong
         >
       </li>
-      <li class="text-white">
+      <li class="text-white scroll-animation">
         Taux horaire pratiqué. Exemple:<strong class="text-xl text-yellow-300">
           5€/h</strong
         >
       </li>
     </ul>
-    <ul class="text-white list-none bg-green-500 rounded-3xl">
-      <li class="text-white">
-        <strong class="text-xl text-yellow-300">Le calcul sera:</strong>
+    <ul class="text-white list-none bg-green-500 rounded-3xl scroll-animation">
+      <li class="text-white scroll-animation">
+        <strong class="text-xl text-yellow-300 scroll-animation"
+          >Le calcul sera:</strong
+        >
       </li>
-      <li class="text-white">
-        <strong class="text-base text-blue-800"
+      <li class="text-white scroll-animation">
+        <strong class="text-base text-blue-800 scroll-animation"
           >Mensuailisation du salaire = (44 semaines X 34h eures) / 12 mois nous
           donne une moyenne de 125 heures / mois
         </strong>
       </li>
-      <li class="text-white">
-        <strong class="text-base text-blue-800"
+      <li class="text-white scroll-animation">
+        <strong class="text-base text-blue-800 scroll-animation"
           >Nous multiplions 125 par 5€
         </strong>
       </li>
     </ul>
 
-    <h3 class="text-yellow-300 text-center text-2xl font-bold mt-3">
+    <h3
+      class="text-yellow-300 text-center text-2xl font-bold mt-3 scroll-animation">
       Ce qui nous donne 625€
     </h3>
     <h3 class="text-yellow-300 text-center text-2xl font-bold mt-3">
       Ce montant sera à déduire des aides de votre CAF
     </h3>
-    <section class="flex justify-around">
+    <section class="flex justify-around scroll-animation">
       <div
         role="status"
-        class="space-y-2 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-start m-2">
+        class="space-y-2 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-start m-2 scroll-animation">
         <div
-          class="flex items-center justify-center w-auto h-auto rounded sm:w-96">
+          class="flex items-center justify-center w-auto h-auto rounded sm:w-96 scroll-animation">
           <img
             src="https://res.cloudinary.com/dgakih33l/image/upload/v1688440418/assmattoury/wonder_1677493588863_hkcmcj.jpg"
             class="h-auto' w-auto rounded-2xl"
             alt="calcul"
           />
         </div>
-        <div class="w-full">
+        <div class="w-full scroll-animation">
           <div>
             <h3
-              class="text-yellow-300 lg:pt-24 lg:text-2xl md:pt-24 md:text-2xl">
+              class="text-yellow-300 lg:pt-24 lg:text-2xl md:pt-24 md:text-2xl scroll-animation">
               Nous avons maintenant tout le nécessaire afin de remplir le
               contrat.
             </h3>
@@ -151,7 +157,7 @@ const workDay = 20;
         <div class="grid grid-cols-2 gap-6"></div>
       </form>
     </div> -->
-    <p id="priceNumber" class="text-white"></p>
+    <p id="priceNumber" class="text-white scroll-animation"></p>
   </article>
   <script>
     const yearweekSuccess = document.getElementById('yearweekSuccess');

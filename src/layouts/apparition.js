@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function checkScroll() {
     sections.forEach((section) => {
       const isInViewport =
-        section.getBoundingClientRect().top < window.innerHeight / 1.5;
+        section.getBoundingClientRect().top < window.innerHeight / 1;
 
       if (isInViewport) {
         section.classList.add('appear');
