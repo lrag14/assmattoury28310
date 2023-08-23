@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculateur de taux horaire proportionnel</title>
+    <!-- Inclure la bibliothèque HTMX -->
+    <script
+      src="https://unpkg.com/htmx.org@1.9.4"
+      integrity="sha384-zUfuhFKKZCbHTY6aRR46gxiqszMk5tcHjsVFxnUo8VMus4kHGVdIYVbOYYNlKmHV"
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <h1>Calculateur de taux horaire proportionnel</h1>
+    <label for="hours">Nombre d'heures :</label>
+    <!-- Champ d'entrée avec déclencheur HTMX "change" -->
+    <input
+      type="number"
+      id="hours"
+      name="hours"
+      min="0"
+      step="1"
+      hx-trigger="change"
+      hx-post="/calcul" />
+    <!-- Envoi d'une requête POST à "/calcul" -->
+    <p id="result" hx-target="#result"></p>
+    <!-- Affichage du résultat ici -->
+  </body>
+  <script>
+    // Réagir à l'événement de configuration de requête HTMX
+    htmx.on('htmx:configRequest', function (event) {
+      // Vérifier si l'attribut hx-post est "/calcul"
+      if (event.detail.target.getAttribute('hx-post') === '/calcul') {
+        const hours = parseFloat(document.getElementById('hours').value);
+
+        // Vérifier si le nombre d'heures est inférieur à 60
+        if (hours < 60) {
+          alert("Le nombre d'heures doit être supérieur à 59.");
+          return; // Arrêter le traitement
+        }
+
+        let tauxHoraire;
+
+        if (hours >= 160) {
+          tauxHoraire = 3.9;
+        } else {
+          const proportion = (hours - 60) / (160 - 60);
+          const tauxMin = 3.9;
+          const tauxMax = 5.2;
+          tauxHoraire = tauxMax - proportion * (tauxMax - tauxMin);
+        }
+
+        // Mettre à jour le résultat affiché avec le taux horaire calculé
+        document.getElementById(
+          'result',
+        ).innerText = `Taux horaire : ${tauxHoraire.toFixed(2)} €/heure`;
+      }
+    });
+  </script>
+</html>
