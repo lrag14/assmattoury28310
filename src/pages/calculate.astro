@@ -1,7 +1,5 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-const indemnity = 3.8;
-const workDay = 20;
 ---
 
 <MainLayout title="Taux horaire">
@@ -160,7 +158,8 @@ const workDay = 20;
       </form>
       <div class="bg-blue-500 text-white px-4 py-2 rounded-lg">
         <p id="result" hx-target="#result" class="text-white"></p>
-
+        <p id="helpcaf" hx-target="#helpcaf" class="text-white"></p>
+        <p id="helpcaf" hx-target="#helpcaf" class="text-white"></p>
         <p id="resulttotal" hx-target="#resulttotal" class="text-white"></p>
       </div>
     </section>
@@ -172,14 +171,17 @@ const workDay = 20;
     const helpcafSelect = document.getElementById('helpcaf');
     const resultElement = document.getElementById('result');
     const resultTotalElement = document.getElementById('resulttotal');
+    const indemnity = 3.8;
+    const workDayElement = document.getElementById('workDay');
 
     // Gérer le calcul et la mise à jour des résultats
     function calculate() {
       const hours = parseFloat(hoursInput.value);
-
       let tauxHoraire;
 
-      if (hours >= 160) {
+      if (hours <= 80) {
+        tauxHoraire = 5.2;
+      } else if (hours >= 160) {
         tauxHoraire = 3.9;
       } else {
         const proportion = (hours - 60) / (160 - 60);
@@ -194,6 +196,7 @@ const workDay = 20;
       resultElement.innerText = `Taux horaire : ${tauxHoraire.toFixed(
         2,
       )} €/heure`;
+
       resultTotalElement.innerText = `Montant mensuel : ${mensuel.toFixed(
         2,
       )} €`;
@@ -201,6 +204,8 @@ const workDay = 20;
 
     // Appeler calculate() lorsque les champs sont modifiés
     hoursInput.addEventListener('input', calculate);
+    // Ajoutez dayindemInput si c'est l'ID que vous voulez utiliser
+    indemMonthInput.addEventListener('input', calculate);
     helpcafSelect.addEventListener('change', calculate);
   </script>
 </MainLayout>
